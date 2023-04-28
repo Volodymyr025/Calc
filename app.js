@@ -16,6 +16,7 @@ function clean () {
         result.textContent = ""
 }
 
+
 for (let i = 0;i < btn.length;i++){
     function clickBtn () {
         if(sum.textContent === '' && btn[i] === plus 
@@ -24,8 +25,15 @@ for (let i = 0;i < btn.length;i++){
             alert('Operation invalid, please press correctly')
             return
          }
+
         const btnNum = btn[i].textContent
         sum.innerHTML += btnNum
+
+        if(sum.textContent.length >= 15){
+            alert('Ended line')
+            sum.textContent = sum.textContent.slice(0, -1)
+        }
+
         if(sum.textContent.includes('++') || 
         sum.textContent.includes('--') ||
         sum.textContent.includes('**') ||
@@ -50,11 +58,8 @@ for (let i = 0;i < btn.length;i++){
             alert('Operation invalid, please press correctly')
             sum.textContent = sum.textContent.slice(0, -1)
         }
-        
     }
     btn[i].addEventListener('click', clickBtn)
-
-    
 }
 
 function equalResult (){
