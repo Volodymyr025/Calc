@@ -1,0 +1,64 @@
+body{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.backgrond{
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    width: 350px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.main {
+    display: contents;
+}
+.number, .option{
+    border: none;
+    border-radius: 50%;
+    min-width: 70px;
+    min-height: 70px;
+    font-size: 30px;
+    margin: 5px;
+    color: white;
+    background-color: #68616178;
+    cursor: pointer;
+}
+.number:active .option:active{
+    background-color: #aca9a978;
+    transition: all ease;
+}
+.option{
+    background-color: orangered;
+}
+.wid{
+    border-radius: 100px;
+    width: 242px;
+    background-color: #ada9a9;
+}
+.wid2{
+    border-radius: 100px;
+    width: 156px;
+}
+
+.sum-result{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    margin: 0px 15px;
+    overflow: hidden;
+}
+.sum-result section{
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 42px;
+    text-align: end;
+
+}
